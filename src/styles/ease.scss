@@ -1,0 +1,116 @@
+@import 'variables';
+@import 'mixins';
+
+
+
+
+.ease-active {
+
+  // .fade-in
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 100%; }
+  }
+  &.fade-in {
+    @include animation($duration $function fade-in)
+  }
+
+  // .enter-right
+  @keyframes enter-right {
+    from { transform: translateX($distance); }
+    to { transform: translateX(0px); }
+  }
+  &.enter-right {
+    @include animation($duration $function enter-right)
+  }
+
+  // .enter-left
+  @keyframes enter-left {
+    from { transform: translateX(-$distance); }
+    to { transform: translateX(0px); }
+  }
+  &.enter-left {
+    @include animation($duration $function enter-left)
+  }
+
+  // .enter-top
+  @keyframes enter-top {
+    from { transform: translateY(-$distance); }
+    to { transform: translateY(0px); }
+  }
+  &.enter-top {
+    @include animation($duration $function enter-top)
+  }
+
+  // .enter-bottom
+  @keyframes enter-bottom {
+    from { transform: translateY($distance); }
+    to { transform: translateY(0px); }
+  }
+  &.enter-bottom {
+    @include animation($duration $function enter-bottom)
+  }
+
+
+
+  // .fade-right
+  @keyframes fade-right {
+    from {
+      transform: translateX($distance);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 100%;
+    }
+  }
+  &.fade-right {
+    @include animation($duration $function fade-right)
+  }
+
+  // .fade-left
+  @keyframes fade-left {
+    from {
+      transform: translateX(-$distance);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 100%;
+    }
+  }
+  &.fade-left {
+    @include animation($duration $function fade-left)
+  }
+
+  // .fade-top
+  @keyframes fade-top {
+    from {
+      transform: translateY(-$distance);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100%;
+    }
+  }
+  &.fade-top {
+    @include animation($duration $function fade-top)
+  }
+
+  // .fade-bottom
+  @keyframes fade-bottom {
+    from {
+      transform: translateY($distance);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 100%;
+    }
+  }
+  &.fade-bottom {
+    @include animation($duration $function fade-bottom)
+  }
+
+}
