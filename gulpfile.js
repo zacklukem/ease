@@ -18,7 +18,6 @@ const scripts = () => {
 const watcher = cb => {
 
   watch('src/styles/**/*.scss', styles);
-
   watch('src/scripts/**/*.js', scripts);
 
   cb();

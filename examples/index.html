@@ -18,11 +18,22 @@
             font-family: 'Roboto Mono', monospace;
         }
         .center {
-            text-align: center;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+
+            display: flex;
+            flex-direction: column;
         }
         h1 {
             font-size: 50px;
             font-weight: 200;
+        }
+        .not-so-wide {
+            width: 1em;
+            text-align: center;
+            word-break: break-all;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -30,31 +41,40 @@
     <div class="center">
         <h1 class="fade-top animate-onclick ease-active">ease</h1>
         <p class="fade-in animate-onclick">
-            <code>.fade-in</code>
+            <code>.fade-in .animate-onclick</code>
         </p>
         <p class="enter-right animate-onclick">
-            <code>.enter-right</code>
+            <code>.enter-right .animate-onclick</code>
         </p>
         <p class="enter-left animate-onclick">
-            <code>.enter-left</code>
+            <code>.enter-left .animate-onclick</code>
         </p>
         <p class="enter-top animate-onclick">
-            <code>.enter-top</code>
+            <code>.enter-top .animate-onclick</code>
         </p>
         <p class="enter-bottom animate-onclick">
-            <code>.enter-bottom</code>
+            <code>.enter-bottom .animate-onclick</code>
         </p>
         <p class="fade-right animate-onclick">
-            <code>.fade-right</code>
+            <code>.fade-right .animate-onclick</code>
         </p>
         <p class="fade-left animate-onclick">
-            <code>.fade-left</code>
+            <code>.fade-left .animate-onclick</code>
         </p>
         <p class="fade-top animate-onclick">
-            <code>.fade-top</code>
+            <code>.fade-top .animate-onclick</code>
         </p>
         <p class="fade-bottom animate-onclick">
-            <code>.fade-bottom</code>
+            <code>.fade-bottom .animate-onclick</code>
+        </p>
+        <p class="not-so-wide">
+            quite a few words if i do say so myself
+        </p>
+        <p class="fade-bottom animate-onvisible animate-onclick">
+            <code>.fade-bottom .animate-onvisible .animate-onclick</code>
+        </p>
+        <p class="not-so-wide">
+            i think that this will fill up the space nicely
         </p>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
