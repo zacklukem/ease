@@ -15,15 +15,21 @@ const scripts = () => {
     .pipe(dest(output));
 };
 
+const docs = () => {
+  return src('dist/**/*')
+    .pipe(dest('docs/dist'));
+};
+
 const watcher = cb => {
 
   watch('src/styles/**/*.scss', styles);
   watch('src/scripts/**/*.js', scripts);
+  watch('dist', docs);
 
   cb();
 };
 
-const build = parallel(scripts, styles);
+const build = series(parallel(scripts, styles), docs);
 
 exports.default = build;
 exports.build = build;

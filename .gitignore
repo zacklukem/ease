@@ -1,4 +1,5 @@
 dist
+!docs/dist
 
 # File-based project format
 *.iws
