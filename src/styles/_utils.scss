@@ -1,0 +1,11 @@
+@each $name, $length in $durations {
+  .duration-#{$name} {
+    animation-duration: $length !important;
+  }
+}
+
+@each $name, $function-name in $functions {
+  .function-#{$name} {
+    animation-timing-function: $function-name !important;
+  }
+}

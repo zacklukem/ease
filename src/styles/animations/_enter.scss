@@ -1,0 +1,20 @@
+
+@mixin enter($name, $transform, $dist) {
+  @keyframes enter-#{$name} {
+    from { transform: #{$transform}#{$dist}#{")"}; }
+    to { transform: translate(0,0); }
+  }
+  &.enter-#{$name} {
+    @include animation($duration $function enter-#{$name});
+  }
+}
+
+@each $name, $transform in $directions {
+
+  @include enter($name, $transform, $distance);
+
+  @each $nameB, $dist in $distances {
+    @include enter($name + "-" + $nameB, $transform, $dist);
+  }
+
+}

@@ -1,10 +1,56 @@
-$function: cubic-bezier(.2,-0.02,.44,.99);
+
+$function-linear: linear;
+$function-ease: ease;
+$function-ease-in: ease-in;
+$function-ease-out: ease-out;
+$function-ease-in-out: ease-in-out;
+$function-custom: cubic-bezier(.2,-0.02,.44,.99);
+
+$functions: (
+  "linear": $function-linear,
+  "ease": $function-ease,
+  "ease-in": $function-ease-in,
+  "ease-out": $function-ease-out,
+  "ease-in-out": $function-ease-in-out,
+  "custom": $function-custom
+);
+
+$function: $function-custom;
 
 $duration-xl: 3s;
 $duration-l: 2s;
 $duration-m: 1s;
 $duration-s: 0.5s;
+
+$durations: (
+  "xl": $duration-xl,
+  "l": $duration-l,
+  "m": $duration-m,
+  "s": $duration-s
+);
+
 $duration: $duration-m;
 
-$distance: 40px;
+$distance-xxl: 300px;
+$distance-xl: 150px;
+$distance-l: 75px;
+$distance-m: 40px;
+$distance-s: 20px;
 
+$distance: $distance-m;
+
+$distances: (
+  "xxl": $distance-xxl,
+  "xl": $distance-xl,
+  "l": $distance-l,
+  "m": $distance-m,
+  "s": $distance-s
+);
+
+
+$directions: (
+  "top": "translateY(-",
+  "bottom": "translateY(",
+  "left": "translateX(-",
+  "right": "translateX("
+);

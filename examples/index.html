@@ -21,61 +21,171 @@
             align-items: center;
             align-content: center;
             justify-content: center;
+            text-align: center;
 
-            display: flex;
-            flex-direction: column;
+            /*display: flex;*/
+            /*flex-direction: column;*/
         }
         h1 {
+            position: relative;
             font-size: 50px;
-            font-weight: 200;
+            margin-right: 30%;
+            margin-left: 30%;
         }
-        .not-so-wide {
-            width: 1em;
-            text-align: center;
-            word-break: break-all;
-            text-transform: uppercase;
+        @keyframes width {
+            from { width: 0; }
+            to { width: 150px;}
+        }
+        h1:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateY(70px) translateX(-50%);
+            height: 2px;
+            width: 150px;
+            background-color: black;
+            animation: 2s ease-out width;
+        }
+        .desc {
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            max-width: 600px;
+            line-height: 25px;
+            padding-top: 8px;
+        }
+        .desc code {
+            line-height: 14px;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: 200;
         }
     </style>
 </head>
 <body>
     <div class="center">
-        <h1 class="fade-top animate-onclick ease-active">ease</h1>
-        <p class="fade-in animate-onclick">
-            <code>.fade-in .animate-onclick</code>
-        </p>
-        <p class="enter-right animate-onclick">
-            <code>.enter-right .animate-onclick</code>
-        </p>
-        <p class="enter-left animate-onclick">
-            <code>.enter-left .animate-onclick</code>
-        </p>
-        <p class="enter-top animate-onclick">
-            <code>.enter-top .animate-onclick</code>
-        </p>
-        <p class="enter-bottom animate-onclick">
-            <code>.enter-bottom .animate-onclick</code>
-        </p>
-        <p class="fade-right animate-onclick">
-            <code>.fade-right .animate-onclick</code>
-        </p>
-        <p class="fade-left animate-onclick">
-            <code>.fade-left .animate-onclick</code>
-        </p>
-        <p class="fade-top animate-onclick">
-            <code>.fade-top .animate-onclick</code>
-        </p>
-        <p class="fade-bottom animate-onclick">
-            <code>.fade-bottom .animate-onclick</code>
-        </p>
-        <p class="not-so-wide">
-            quite a few words if i do say so myself
-        </p>
-        <p class="fade-bottom animate-onvisible animate-onclick">
-            <code>.fade-bottom .animate-onvisible .animate-onclick</code>
-        </p>
-        <p class="not-so-wide">
-            i think that this will fill up the space nicely
-        </p>
+        <h1 class="fade-top-xl duration-l ease-active">ease</h1>
+        <section class="fade-in animate-onvisible">
+            <h2>fades</h2>
+            <p class="fade-in animate-onclick">
+                <code>.fade-in</code>
+            </p>
+        </section>
+
+        <section class="fade-in animate-onvisible">
+            <h2>entrances</h2>
+            <p class="enter-right animate-onclick">
+                <code>.enter-right</code>
+            </p>
+            <p class="enter-left animate-onclick">
+                <code>.enter-left</code>
+            </p>
+            <p class="enter-top animate-onclick">
+                <code>.enter-top</code>
+            </p>
+            <p class="enter-bottom animate-onclick">
+                <code>.enter-bottom</code>
+            </p>
+        </section>
+
+        <section class="fade-in animate-onvisible">
+            <h2>fades & entrances</h2>
+            <p class="fade-right animate-onclick">
+                <code>.fade-right</code>
+            </p>
+            <p class="fade-left animate-onclick">
+                <code>.fade-left</code>
+            </p>
+            <p class="fade-top animate-onclick">
+                <code>.fade-top</code>
+            </p>
+            <p class="fade-bottom animate-onclick">
+                <code>.fade-bottom</code>
+            </p>
+        </section>
+
+        <section class="fade-in animate-onvisible">
+            <h2>scale</h2>
+            <p class="enter-right-xxl animate-onclick">
+                <code>.enter-right-xxl</code>
+            </p>
+            <p class="enter-left-xl animate-onclick">
+                <code>.enter-left-xl</code>
+            </p>
+            <p class="fade-left-l animate-onclick">
+                <code>.fade-left-l</code>
+            </p>
+            <p class="fade-top animate-onclick">
+                <code>.fade-top</code>
+            </p>
+            <p class="fade-bottom-s animate-onclick">
+                <code>.fade-bottom-s</code>
+            </p>
+        </section>
+
+        <section class="fade-in animate-onvisible">
+            <h2>duration</h2>
+            <p class="fade-in duration-xl animate-onclick">
+                <code>.fade-in .duration-xl</code>
+            </p>
+            <p class="fade-in duration-l animate-onclick">
+                <code>.fade-in .duration-l</code>
+            </p>
+            <p class="fade-in duration-m animate-onclick">
+                <code>.fade-in .duration-m</code>
+            </p>
+            <p class="fade-in duration-s animate-onclick">
+                <code>.fade-in .duration-s</code>
+            </p>
+        </section>
+
+        <section class="fade-in animate-onvisible">
+            <h2>function</h2>
+            <p class="enter-right function-linear animate-onclick">
+                <code>.enter-right .function-linear</code>
+            </p>
+            <p class="enter-right function-ease animate-onclick">
+                <code>.enter-right .function-ease</code>
+            </p>
+            <p class="enter-right function-ease-in animate-onclick">
+                <code>.enter-right .function-ease-in</code>
+            </p>
+            <p class="enter-right function-ease-out animate-onclick">
+                <code>.enter-right .function-ease-out</code>
+            </p>
+            <p class="enter-right function-ease-in-out animate-onclick">
+                <code>.enter-right .function-ease-in-out</code>
+            </p>
+            <p class="enter-right function-custom animate-onclick">
+                <code>.enter-right .function-custom</code>
+            </p>
+        </section>
+
+        <section class="fade-in animate-onvisible">
+            <h2>activation</h2>
+            <p class="fade-in ease-active">
+                <code>.fade-in .ease-active</code>
+                <span class="desc">
+                    <code>.ease-active</code> is the class that is applied to activate animations.  When this class is applied the animation will occur immediately
+                </span>
+                ~
+            </p>
+            <p class="fade-in animate-onclick">
+                <code>.fade-in .animate-onclick</code>
+                <span class="desc">
+                    <code>.animate-onclick</code> will animate the object when it is clicked.  This will reanimate the object if it has already been animated
+                </span>
+                ~
+            </p>
+            <p class="fade-bottom animate-onvisible">
+                <code>.fade-bottom .animate-onvisible</code>
+                <span class="desc">
+                    <code>.animate-onvisible</code> will animate the object when it becomes visible in the scrollbox.  This will <i>not</i> reanimate the object if it has already been animated
+                </span>
+            </p>
+        </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="../dist/ease.js"></script>

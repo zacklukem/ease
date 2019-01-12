@@ -1,0 +1,35 @@
+// .fade-in
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 100%; }
+}
+&.fade-in {
+  @include animation($duration $function fade-in)
+}
+
+
+@mixin fadeEnter($name, $transform, $dist) {
+  @keyframes fade-#{$name} {
+    from {
+      transform: #{$transform}#{$dist}#{")"};
+      opacity: 0;
+    }
+    to {
+      transform: translate(0,0);
+      opacity: 100%;
+    }
+  }
+  &.fade-#{$name} {
+    @include animation($duration $function fade-#{$name});
+  }
+}
+
+@each $name, $transform in $directions {
+
+  @include fadeEnter($name, $transform, $distance);
+
+  @each $nameB, $dist in $distances {
+    @include fadeEnter($name + "-" + $nameB, $transform, $dist);
+  }
+
+}
