@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ease Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="../dist/ease.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -34,7 +35,7 @@
         }
         @keyframes width {
             from { width: 0; }
-            to { width: 150px;}
+            to { }
         }
         h1:after {
             content: "";
@@ -45,6 +46,12 @@
             width: 150px;
             background-color: black;
             animation: 2s ease-out width;
+        }
+        .subtitle {
+            display: block;
+            font-size: 16px;
+            line-height: 25px;
+            animation-duration: 1.6s !important;
         }
         .desc {
             display: block;
@@ -67,6 +74,7 @@
 <body>
     <div class="center">
         <h1 class="fade-top-xl duration-l ease-active">ease</h1>
+        <span class="subtitle fade-top-xl function-ease-out ease-active">css animations with <i>ease</i> 😒</span>
         <section class="fade-in animate-onvisible">
             <h2>fades</h2>
             <p class="fade-in animate-onclick">
