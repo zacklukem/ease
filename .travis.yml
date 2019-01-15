@@ -5,5 +5,7 @@ before_script:
 - npm install -g gulp-cli
 - npm install
 - npm install @types/jquery
-- ls node_modules
+- pwd
+- ls node_modules/@types
+- ls node_modules/@types/jquery
 script: gulp
