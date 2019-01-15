@@ -1,7 +1,7 @@
 // Copyright 2018 Zachary Mayhew <mayhew.zachary2003@gmail.com>
 // Licenced under the MIT Licence
 
-/// <reference path="../../node_modules/@types/jquery/jquery.d.ts" />
+/// <reference path="../../node_modules/@types/jquery/jQuery.d.ts" />
 import {animate, reanimate} from "./animations";
 import * as constants from "./constants"
 
