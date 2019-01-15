@@ -25,7 +25,7 @@ const scripts = () => {
     .plugin(tsify)
     .plugin(errorify)
     .bundle()
-    .pipe(fs.createWriteStream('./dist/ease.js'));
+    .pipe(fs.createWriteStream('./dist/ease.js', {flags: 'w'}));
 };
 
 const docs = () => {
