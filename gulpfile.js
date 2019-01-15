@@ -1,6 +1,13 @@
+// Copyright 2018 Zachary Mayhew <mayhew.zachary2003@gmail.com>
+// Licenced under the MIT Licence
+
 const { watch, series, parallel, src, dest } = require('gulp');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const browserify = require('browserify');
+const errorify = require('errorify');
+const tsify = require('tsify');
+const fs = require('fs');
 
 const output = 'dist';
 
@@ -11,8 +18,14 @@ const styles = () => {
 };
 
 const scripts = () => {
-  return src('src/scripts/**/*.js')
-    .pipe(dest(output));
+  return browserify({
+    entries: 'src/scripts/ease.ts',
+    debug: true
+  })
+    .plugin(tsify)
+    .plugin(errorify)
+    .bundle()
+    .pipe(fs.createWriteStream('./dist/ease.js'));
 };
 
 const docs = () => {
@@ -23,7 +36,7 @@ const docs = () => {
 const watcher = cb => {
 
   watch('src/styles/**/*.scss', styles);
-  watch('src/scripts/**/*.js', scripts);
+  watch('src/scripts/**/*.ts', scripts);
   watch('dist', docs);
 
   cb();

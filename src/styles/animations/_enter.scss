@@ -1,3 +1,5 @@
+// Copyright 2018 Zachary Mayhew <mayhew.zachary2003@gmail.com>
+// Licenced under the MIT Licence
 
 @mixin enter($name, $transform, $dist) {
   @keyframes enter-#{$name} {

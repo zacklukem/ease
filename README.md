@@ -1,8 +1,10 @@
 <h1 align='center'><code>ease</code></h1>
+<div align='center'>
+<a href="https://travis-ci.org/zacklukem/ease"><img src="https://travis-ci.org/zacklukem/ease.svg?branch=master"></a>
+</div>
+<br>
 
-[![Build Status](https://travis-ci.org/zacklukem/ease.svg?branch=master)](https://travis-ci.org/zacklukem/ease)
-
-`ease` is a javascript/css web library for animations.  It allows you to add animations to html without writing your own javascript or css code.
+`ease` is a javascript/css web library for making animations with *ease* 😒.  It allows you to add animations to html without writing your own javascript or css code.
 
 ### Usage
 To use ease you must link the css file and the javascript file.  To link them just link the css in the header:
@@ -20,4 +22,11 @@ There are many different classes for different animations, for example `.fade-ri
 2. Install [gulp](https://gulpjs.com/)
 3. In the root directory run `gulp` to build
 4. To build with file watching run `gulp watch`
-The files are built in the `dist` directory
+
+The files are built in the `dist` directory and the `docs` directory
+
+---
+
+Copyright 2018 Zachary Mayhew \<mayhew.zachary2003@gmail.com\>
+
+Licenced under the MIT Licence
