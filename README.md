@@ -1,5 +1,7 @@
 <h1 align='center'><code>ease</code></h1>
 
+[![Build Status](https://travis-ci.org/zacklukem/ease.svg?branch=master)](https://travis-ci.org/zacklukem/ease)
+
 `ease` is a javascript/css web library for animations.  It allows you to add animations to html without writing your own javascript or css code.
 
 ### Usage

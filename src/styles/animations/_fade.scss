@@ -7,7 +7,6 @@
   @include animation($duration $function fade-in)
 }
 
-
 @mixin fadeEnter($name, $transform, $dist) {
   @keyframes fade-#{$name} {
     from {

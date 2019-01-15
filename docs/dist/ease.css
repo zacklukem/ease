@@ -516,3 +516,6 @@
 
 .function-custom {
   animation-timing-function: cubic-bezier(0.2, -0.02, 0.44, 0.99) !important; }
+
+.direction-reverse {
+  animation-direction: reverse; }

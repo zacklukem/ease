@@ -9,3 +9,7 @@
     animation-timing-function: $function-name !important;
   }
 }
+
+.direction-reverse {
+  animation-direction: reverse;
+}
